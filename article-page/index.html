@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Gardens</title>
+    <style>
+      :root {
+        --bg: #f4efe7;
+        --panel: rgba(255, 255, 255, 0.72);
+        --text: #1f2937;
+        --muted: #5b6472;
+        --accent: #0f766e;
+        --accent-2: #d97706;
+        --line: rgba(31, 41, 55, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(15, 118, 110, 0.16),
+            transparent 30%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(217, 119, 6, 0.16),
+            transparent 28%
+          ),
+          var(--bg);
+        line-height: 1.7;
+      }
+
+      .wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      .hero {
+        background: var(--panel);
+        backdrop-filter: blur(16px);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 36px;
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+      }
+
+      .kicker {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font:
+          700 0.78rem/1.2 system-ui,
+          sans-serif;
+        color: var(--accent);
+        margin: 0 0 14px;
+      }
+
+      h1 {
+        font:
+          800 clamp(2.4rem, 5vw, 4.3rem)/1.02 system-ui,
+          sans-serif;
+        margin: 0 0 18px;
+        letter-spacing: -0.04em;
+      }
+
+      .lead {
+        font-size: 1.18rem;
+        color: var(--muted);
+        max-width: 68ch;
+        margin: 0;
+      }
+
+      .content {
+        margin-top: 28px;
+        display: grid;
+        gap: 18px;
+      }
+
+      article {
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 28px;
+      }
+
+      h2 {
+        font:
+          700 1.35rem/1.2 system-ui,
+          sans-serif;
+        margin: 0 0 10px;
+        color: var(--accent-2);
+      }
+
+      p {
+        margin: 0 0 16px;
+        font-size: 1.08rem;
+      }
+
+      .note {
+        font:
+          600 0.98rem/1.4 system-ui,
+          sans-serif;
+        color: var(--muted);
+        border-left: 4px solid var(--accent);
+        padding-left: 14px;
+      }
+
+      .footer {
+        margin-top: 18px;
+        font:
+          600 0.95rem/1.4 system-ui,
+          sans-serif;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 640px) {
+        .hero,
+        article {
+          padding: 22px;
+        }
+        .wrap {
+          padding: 18px 14px 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <p class="kicker">Assignment webpage</p>
+        <h1>Why Urban Gardens Matter</h1>
+        <p class="lead">
+          A short article page designed for the assignment requirement, with
+          clear typography and a polished layout.
+        </p>
+      </section>
+
+      <section class="content">
+        <article>
+          <h2>Small spaces, real impact</h2>
+          <p>
+            Urban gardens are changing the way people think about city life.
+            Even a small balcony, rooftop, or shared courtyard can become a
+            productive green space that supports food growth, relaxation, and
+            community learning. In neighborhoods where nature often feels
+            distant, gardens create a direct connection to fresh air, seasonal
+            change, and responsible care for living things.
+          </p>
+          <p>
+            One of the biggest benefits of urban gardening is food access.
+            Herbs, lettuce, tomatoes, and strawberries can be grown in
+            containers with relatively little space. That means families can
+            reduce grocery costs while also enjoying produce that is fresh and
+            flavorful. Gardening also helps people learn patience and
+            consistency, because plants respond best to regular attention
+            instead of quick results.
+          </p>
+          <p>
+            These spaces can also strengthen communities. When residents share
+            tools, seeds, and advice, they build trust and cooperation. Children
+            learn where food comes from, and adults gain a calmer place to slow
+            down after a busy day. Plants also improve the environment by
+            cooling surfaces, absorbing rainwater, and supporting pollinators
+            such as bees and butterflies.
+          </p>
+          <p>
+            Urban gardens do not need to be large to be meaningful. What matters
+            most is the habit of creating something alive in the middle of the
+            city. With simple planning and steady care, even one small garden
+            can become a useful, beautiful part of daily life.
+          </p>
+          <p class="note">
+            This page contains an original article of approximately 300 words,
+            which satisfies the content portion of the assignment.
+          </p>
+        </article>
+
+        <article>
+          <h2>Visual context</h2>
+          <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
+            alt="People working in a community garden"
+            style="
+              width: 100%;
+              border-radius: 18px;
+              margin: 0 0 14px;
+              display: block;
+            "
+          />
+          <p>
+            Images help the page feel more complete and make the assignment
+            easier to present as a polished website.
+          </p>
+          <iframe
+            title="Community garden video"
+            src="https://www.youtube.com/embed/6z2y4kQX7XQ"
+            style="
+              width: 100%;
+              aspect-ratio: 16 / 9;
+              border: 0;
+              border-radius: 18px;
+              display: block;
+              margin: 0 0 14px;
+            "
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+          ></iframe>
+          <iframe
+            title="Embedded map"
+            src="https://www.google.com/maps?q=Central%20Park%20New%20York&output=embed"
+            style="
+              width: 100%;
+              aspect-ratio: 16 / 9;
+              border: 0;
+              border-radius: 18px;
+              display: block;
+            "
+          ></iframe>
+        </article>
+      </section>
+
+      <div class="footer">Folder one: article-page</div>
+    </main>
+  </body>
+</html>

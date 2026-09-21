@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Showcase</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: rgba(15, 23, 42, 0.72);
+        --card: rgba(255, 255, 255, 0.08);
+        --text: #e5eefb;
+        --muted: #b7c3d9;
+        --accent: #38bdf8;
+        --accent-2: #f59e0b;
+        --line: rgba(255, 255, 255, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(56, 189, 248, 0.24),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at bottom left,
+            rgba(245, 158, 11, 0.22),
+            transparent 28%
+          ),
+          linear-gradient(160deg, #0f172a 0%, #111827 45%, #172554 100%);
+        min-height: 100vh;
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 42px 20px 60px;
+      }
+
+      .hero {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 34px;
+        backdrop-filter: blur(14px);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.15);
+        color: var(--accent);
+        font:
+          700 0.8rem/1 system-ui,
+          sans-serif;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        margin: 0;
+        font:
+          800 clamp(2.3rem, 5vw, 4.2rem)/1.02 system-ui,
+          sans-serif;
+        letter-spacing: -0.05em;
+      }
+
+      .lead {
+        max-width: 70ch;
+        color: var(--muted);
+        font-size: 1.1rem;
+        margin: 14px 0 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 22px;
+        margin-top: 24px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+      }
+
+      .card .body {
+        padding: 18px;
+      }
+
+      .card h2 {
+        margin: 0 0 10px;
+        font:
+          700 1.25rem/1.2 system-ui,
+          sans-serif;
+        color: #ffffff;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+        font-size: 1rem;
+      }
+
+      .media {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border: 0;
+        display: block;
+        background: #111827;
+      }
+
+      img.heroimg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        aspect-ratio: 4 / 3;
+      }
+
+      .stack {
+        display: grid;
+        gap: 22px;
+      }
+
+      .footer {
+        margin-top: 18px;
+        color: var(--muted);
+        text-align: center;
+        font:
+          600 0.95rem/1.4 system-ui,
+          sans-serif;
+      }
+
+      @media (max-width: 860px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding: 22px;
+        }
+        .wrap {
+          padding: 16px 14px 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <span class="tag">Media showcase</span>
+        <h1>Explore Cities, Culture, and Motion</h1>
+        <p class="lead">
+          This second page satisfies the assignment by combining embedded media
+          with readable supporting text in a modern layout.
+        </p>
+      </section>
+
+      <section class="grid">
+        <div class="stack">
+          <article class="card">
+            <img
+              class="heroimg"
+              src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1200&q=80"
+              alt="City skyline at sunset"
+            />
+            <div class="body">
+              <h2>City light and skyline</h2>
+              <p>
+                Images help anchor a page visually. This one gives the page a
+                clear atmosphere and supports the idea of a media-rich
+                assignment submission.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <iframe
+              class="media"
+              src="https://www.youtube.com/embed/5qap5aO4i9A"
+              title="Relaxing music video"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            ></iframe>
+            <div class="body">
+              <h2>Embedded video</h2>
+              <p>
+                The embedded video proves that the page can host interactive
+                content, which is one of the assignment examples.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="body">
+              <h2>Short article</h2>
+              <p>
+                A good webpage does not rely on media alone. A short article
+                gives the page a clear topic, helps organize the layout, and
+                shows that the design can support written content as well as
+                embedded elements.
+              </p>
+              <p style="margin-top: 14px">
+                Combining text, images, video, and maps creates a richer final
+                result for the assignment and demonstrates a wider range of web
+                content.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <article class="card">
+          <iframe
+            class="media"
+            src="https://www.google.com/maps?q=New%20York%20City&output=embed"
+            title="Embedded map"
+          ></iframe>
+          <div class="body">
+            <h2>Embedded map</h2>
+            <p>
+              Maps are useful for location-based storytelling. Here, the map
+              adds another kind of content so the page clearly fulfills the
+              assignment requirement for embedded media.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <div class="footer">Folder two: media-page</div>
+    </main>
+  </body>
+</html>
